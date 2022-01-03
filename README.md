@@ -26,12 +26,12 @@ detecting와 tracking은 YOLOv5로, 위반 탐지 판단은 rule-based 알고리
 
 ### Presentation
 
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893283-6655ccb3-848b-4fb3-ab7b-cbc07459ed0b.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893319-08a00775-06af-4d6e-bc93-2aa4a01f96fa.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893321-7e611fc8-1299-44a9-8f6b-9d7d0e1528ae.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893325-3a5f4cb6-44ec-417e-a27c-d365fd1bad40.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893333-6ae19323-20e1-41b4-88fc-96d1875b32e1.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893334-6dd5d221-1b7e-4ff2-8df1-84c17c79f5a9.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893338-b183883e-3911-4518-bf8b-e3b0dabd413a.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893340-771b97c4-f454-44e5-a908-6f5ec5aee44e.jpg"/>
- <img width="50%" src="https://user-images.githubusercontent.com/83095823/147893341-63f9fed5-4f09-4515-9fed-69fd7ad14fdf.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893283-6655ccb3-848b-4fb3-ab7b-cbc07459ed0b.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893319-08a00775-06af-4d6e-bc93-2aa4a01f96fa.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893321-7e611fc8-1299-44a9-8f6b-9d7d0e1528ae.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893325-3a5f4cb6-44ec-417e-a27c-d365fd1bad40.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893333-6ae19323-20e1-41b4-88fc-96d1875b32e1.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893334-6dd5d221-1b7e-4ff2-8df1-84c17c79f5a9.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893338-b183883e-3911-4518-bf8b-e3b0dabd413a.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893340-771b97c4-f454-44e5-a908-6f5ec5aee44e.jpg"/>
+ <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893341-63f9fed5-4f09-4515-9fed-69fd7ad14fdf.jpg"/>
