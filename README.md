@@ -8,10 +8,12 @@
  **팀 명 :** 피하지말고 PM
  
  **팀 원 :** 박호준, 이주천, 장효주
- 
+  
  ![newslist_12](https://user-images.githubusercontent.com/8746262/147805256-d5ef10ae-59ba-46a4-9476-d0317dd37c32.jpg)
  
  ![KakaoTalk_20211231_144604570](https://user-images.githubusercontent.com/8746262/147805946-6a79b21a-e44e-4af2-84bc-cf3d37174318.jpg)
+ <img width="50%" src="https://user-images.githubusercontent.com/8746262/147805946-6a79b21a-e44e-4af2-84bc-cf3d37174318.jpg"/>
+
  
  **수 상 :** 한국 폴리텍대학 이사장상 
 
