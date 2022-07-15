@@ -38,7 +38,7 @@ detecting와 tracking은 YOLOv5로, 위반 탐지 판단은 rule-based 알고리
 
 ### code
 ##### 전처리 과정 1. yolo 학습을 위한 bounding box 좌표 변환
-##### -> COCO 좌표 이므로, yolo 형식에 맞게 변환해줘야함
+-> COCO 좌표 이므로, yolo 형식에 맞게 변환해줘야함
 ```python
 def bbox(anno_info):
     bbox = []
@@ -62,7 +62,35 @@ def bbox(anno_info):
     return bbox
 ```
 
-전처리 과정 2. 프레임 낮추기
-
+##### 전처리 과정 2. 프레임 낮추기
+구현 환경에 따라 과부하가 올 수 있기 때문에 프레임을 맞춰서 용량 문제 해결
 ```python
+import cv2
+import time
+import imutils
+from glob import glob
+from PIL import Image
+import os
+
+# output 경로 지정
+output_path = 'E:/train_person/images/' 
+# 불러올 이미지 파일 경로 지정
+load_path = 'C:/Users/82103/OneDrive/바탕 화면/교통문제 해결을 위한 CCTV 교통 영상(시내도로)/Training/교통안전(Bbox)/부천남부역 공영주차장/BC2000103/'
+# 위에서 뽑아낸 label 파일 경로
+label_path = 'E:/train_person/labels/'
+# 파일명 리스트 불러와서
+file = os.listdir(label_path)
+
+# 이름만 가져와서 jpg 파일 붙인 후, load_path 에서 불러오기
+file_list = [x.split(".")[0] + ".jpg" for x in file]
+
+def save_img(file_list):
+    
+    for i in range(len(file_list)):
+        cap = cv2.VideoCapture(load_path + file_list[i])
+        hasFrame, img = cap.read()
+        img_frame = imutils.resize(img, width=640, height = 360)
+        cap.release()
+        cv2.imwrite(output_path + file_list[i], img_frame)
+        print(f'{i} th done!')
 ```
