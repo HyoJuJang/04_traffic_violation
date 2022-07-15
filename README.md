@@ -94,3 +94,54 @@ def save_img(file_list):
         cv2.imwrite(output_path + file_list[i], img_frame)
         print(f'{i} th done!')
 ```
+
+##### yolov5 적용하기
+```python
+from glob import glob
+from sklearn.model_selection import train_test_split
+import yaml
+import os
+import pandas as pd
+import tensorflow as tf
+import torch
+
+train_img_list = glob('E:/new_file/images/train/*.jpg')
+val_img_list = glob('E:/new_file/images/valid/*.jpg')
+
+import os
+os.chdir('C:/Users/82103/' + "yolov5")
+import yolov5
+
+
+# 이미지 이름에 맞는 텍스트 데이터 설정해주기
+with open('E:/new_file/train.txt', 'w') as f:
+    f.write('\n'.join(train_img_list) + '\n')
+with open('E:/new_file/val.txt', 'w') as f:
+    f.write('\n'.join(val_img_list) + '\n')
+    
+# yolo 학습을 위한 설명서 느낌의 yaml 파일 생성
+data = {}
+data['train'] = 'E:/new_file/train.txt'
+data['val'] = 'E:/new_file/val.txt'
+
+data['nc']=17
+
+data['names']=['p_sign_green','p_sign_red','v_sign_green','v_sign_yellow',
+'v_sign_red','v_sign_sl','v_sign_l','motor','byc','kickb','motor_r','byc_r','kickb_r','byc_c','kickb_c','kickb_many','pedestrian']
+
+with open('C:/Users/82103/yolov5/data.yaml', 'w') as f:
+    yaml.dump(data,f)
+
+# pytorch gpu 사용법
+import torch
+torch.cuda.is_available()
+
+from yolov5 import utils
+display = utils.notebook_init()  # checks
+
+# 모델 
+!python train.py --img 640 --batch 8 --epochs 6 --data C:/Users/82103/yolov5/data.yaml --cfg C:/Users/82103/yolov5/models/yolov5s.yaml --weights yolov5s.pt --name test1212_yolov5s_object_results --device 0
+
+# 학습된 모델로 탐지 
+!python detect.py --weights E:/best_weights/object_best.pt --img 640 --conf 0.4 --source E:/도로교통공단\대용량데이터/PM사고위험영상데이터/횡단보도주행위반_5/자전거/정상/
+```
