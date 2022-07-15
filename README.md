@@ -124,6 +124,21 @@ data = {}
 data['train'] = 'E:/new_file/train.txt'
 data['val'] = 'E:/new_file/val.txt'
 
+# model hyperparameter 지정
+data['box'] = 0.05  # box loss gain 
+data['cls_pw']= 1.0  # cls BCELoss positive_weight 
+data['obj']= 1.0  # obj loss gain (scale with pixels) 
+data['obj_pw'] = 1.0  # obj BCELoss positive_weight 
+data['iou_t'] = 0.30  # IoU training threshold 
+    
+data['hsv_h']= 0.8  # image HSV-Hue augmentation (fraction) 
+data['hsv_s']= 0.8  # image HSV-Saturation augmentation (fraction) 
+data['hsv_v']= 0.8  # image HSV-Value augmentation (fraction) 
+data['degrees']= 0.1  # image rotation (+/- deg) 
+data['translate'] = 0.1  # image translation (+/- fraction) 
+data['scale'] = 0.6  # image scale (+/- gain) 
+data['shear'] = 0.01 # image shear (+/- deg) 
+
 data['nc']=17
 
 data['names']=['p_sign_green','p_sign_red','v_sign_green','v_sign_yellow',
