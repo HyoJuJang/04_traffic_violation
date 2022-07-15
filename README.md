@@ -37,6 +37,27 @@ detecting와 tracking은 YOLOv5로, 위반 탐지 판단은 rule-based 알고리
  <img width="80%" src="https://user-images.githubusercontent.com/83095823/147893341-63f9fed5-4f09-4515-9fed-69fd7ad14fdf.jpg"/>
 
 ### code
+전처리 과정 1. yolo 학습을 위한 bounding box 좌표 변환
+-> COCO 좌표 이므로, yolo 형식에 맞게 변환해줘야함
 ```python
+def bbox(anno_info):
+    bbox = []
 
+    for m_bbox,cate_id in zip(anno_info['bbox'],anno_info['category_id']):
+        xyxy=m_bbox
+
+        b_center_x = (xyxy[0] + xyxy[2]) / 2
+        b_center_y = (xyxy[1] + xyxy[3]) / 2
+        b_width    = xyxy[2] - xyxy[0]
+        b_height   = xyxy[3] - xyxy[1]
+
+        b_center_x/=1920
+        b_center_y/=1080
+        b_width/=1920
+        b_height/=1080
+        cateid = cate_id -1 # 1-8 로 되어있어서 -1 해줘야함 (yolo는 class 를 0부터 읽음)
+
+        bbox.append("{} {:.6f} {:.6f} {:.6f} {:.6f}".format(cateid, b_center_x, b_center_y, b_width, b_height))
+
+    return bbox
 ```
