@@ -1,5 +1,5 @@
 ## AI야 교통안전을 부탁해 - 2021 인공지능 학습용 데이터 해커톤 대회
-
+![KakaoTalk_20220709_230716837_01](https://user-images.githubusercontent.com/91238910/179466526-019ac225-6f71-4fb9-8b4b-6b9882595156.jpg)
 
  **제 목 :** 개인형이동장치(PM) 법규위반 영상 데이터를 활용한 이상 탐지/분류(Anomaly Detection/Classification) 프로그램 개발
  
